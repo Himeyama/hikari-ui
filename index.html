@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hikari UI — Personal component library</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased">
+  <div class="app-shell min-h-screen">
+    <aside class="sidebar">
+      <a class="brand" href="#top"><span>hikari<span class="brand-dot">.</span><small>UI ライブラリ</small></span></a>
+
+      <nav aria-label="コンポーネントナビゲーション">
+        <a class="nav-link active" href="#overview"> 概要</a>
+        <div class="sidebar-label nav-heading">基本設定</div>
+        <a class="nav-link" href="#colors"> 色</a>
+        <a class="nav-link" href="#typography"> 文字</a>
+        <div class="sidebar-label nav-heading">コンポーネント</div>
+        <a class="nav-link" href="#buttons"> ボタン</a>
+        <a class="nav-link" href="#forms"> フォーム</a>
+        <a class="nav-link" href="#feedback"> 通知・状態</a>
+        <a class="nav-link" href="#cards"> カード</a><a class="nav-link" href="#selection"> 選択・入力</a><a class="nav-link"
+          href="#progress"> 進捗</a><a class="nav-link" href="#navigation"> ナビゲーション</a><a class="nav-link"
+          href="#disclosure"> 詳細表示</a><a class="nav-link" href="#dialogs"> ダイアログ</a><a class="nav-link" href="#data">
+          データ表示</a>
+      </nav>
+    </aside>
+    <div class="sidebar-resizer" role="separator" aria-label="メニューの幅" aria-orientation="vertical" aria-valuemin="160"
+      aria-valuemax="400" aria-valuenow="230" tabindex="0"></div>
+    <main id="top" class="main">
+      <header class="topbar">
+        <div><span class="muted">ライブラリ</span><span class="slash">/</span><span>概要</span></div>
+      </header>
+      <div class="content" id="overview">
+        <section class="section" id="colors">
+          <div class="section-head">
+            <div>
+              <h3>色</h3>
+            </div>
+          </div>
+          <div class="palette" role="group" aria-label="アクセントカラー"><button type="button" class="swatch color-choice"
+              data-color="#002050" aria-pressed="false" aria-label="濃い青をアクセントカラーにする"><span class="swatch-color"
+                style="background:#002050"></span><strong>濃い青</strong><small>#002050</small></button><button
+              type="button" class="swatch color-choice" data-color="#00188f" aria-pressed="false"
+              aria-label="藍をアクセントカラーにする"><span class="swatch-color"
+                style="background:#00188f"></span><strong>藍</strong><small>#00188F</small></button><button type="button"
+              class="swatch color-choice" data-color="#0078d4" aria-pressed="true" aria-label="青をアクセントカラーにする"><span
+                class="swatch-color"
+                style="background:#0078d4"></span><strong>青</strong><small>#0078D4</small></button><button type="button"
+              class="swatch color-choice" data-color="#00bcf2" aria-pressed="false" aria-label="水色をアクセントカラーにする"><span
+                class="swatch-color"
+                style="background:#00bcf2"></span><strong>水色</strong><small>#00BCF2</small></button><button
+              type="button" class="swatch color-choice" data-color="#004b50" aria-pressed="false"
+              aria-label="濃いティールをアクセントカラーにする"><span class="swatch-color"
+                style="background:#004b50"></span><strong>濃いティール</strong><small>#004B50</small></button><button
+              type="button" class="swatch color-choice" data-color="#008272" aria-pressed="false"
+              aria-label="ティールをアクセントカラーにする"><span class="swatch-color"
+                style="background:#008272"></span><strong>ティール</strong><small>#008272</small></button><button
+              type="button" class="swatch color-choice" data-color="#00b294" aria-pressed="false"
+              aria-label="明るいティールをアクセントカラーにする"><span class="swatch-color"
+                style="background:#00b294"></span><strong>明るいティール</strong><small>#00B294</small></button><button
+              type="button" class="swatch color-choice" data-color="#004b1c" aria-pressed="false"
+              aria-label="濃い緑をアクセントカラーにする"><span class="swatch-color"
+                style="background:#004b1c"></span><strong>濃い緑</strong><small>#004B1C</small></button><button
+              type="button" class="swatch color-choice" data-color="#107c10" aria-pressed="false"
+              aria-label="緑をアクセントカラーにする"><span class="swatch-color"
+                style="background:#107c10"></span><strong>緑</strong><small>#107C10</small></button><button type="button"
+              class="swatch color-choice" data-color="#bad80a" aria-pressed="false" aria-label="黄緑をアクセントカラーにする"><span
+                class="swatch-color"
+                style="background:#bad80a"></span><strong>黄緑</strong><small>#BAD80A</small></button><button
+              type="button" class="swatch color-choice" data-color="#d29200" aria-pressed="false"
+              aria-label="濃い黄色をアクセントカラーにする"><span class="swatch-color"
+                style="background:#d29200"></span><strong>濃い黄色</strong><small>#D29200</small></button><button
+              type="button" class="swatch color-choice" data-color="#ffb900" aria-pressed="false"
+              aria-label="黄色をアクセントカラーにする"><span class="swatch-color"
+                style="background:#ffb900"></span><strong>黄色</strong><small>#FFB900</small></button><button
+              type="button" class="swatch color-choice" data-color="#fff100" aria-pressed="false"
+              aria-label="明るい黄色をアクセントカラーにする"><span class="swatch-color"
+                style="background:#fff100"></span><strong>明るい黄色</strong><small>#FFF100</small></button><button
+              type="button" class="swatch color-choice" data-color="#d83b01" aria-pressed="false"
+              aria-label="濃いオレンジをアクセントカラーにする"><span class="swatch-color"
+                style="background:#d83b01"></span><strong>濃いオレンジ</strong><small>#D83B01</small></button><button
+              type="button" class="swatch color-choice" data-color="#ea4300" aria-pressed="false"
+              aria-label="オレンジをアクセントカラーにする"><span class="swatch-color"
+                style="background:#ea4300"></span><strong>オレンジ</strong><small>#EA4300</small></button><button
+              type="button" class="swatch color-choice" data-color="#ff8c00" aria-pressed="false"
+              aria-label="明るいオレンジをアクセントカラーにする"><span class="swatch-color"
+                style="background:#ff8c00"></span><strong>明るいオレンジ</strong><small>#FF8C00</small></button><button
+              type="button" class="swatch color-choice" data-color="#a4262c" aria-pressed="false"
+              aria-label="濃い赤をアクセントカラーにする"><span class="swatch-color"
+                style="background:#a4262c"></span><strong>濃い赤</strong><small>#A4262C</small></button><button
+              type="button" class="swatch color-choice" data-color="#e81123" aria-pressed="false"
+              aria-label="赤をアクセントカラーにする"><span class="swatch-color"
+                style="background:#e81123"></span><strong>赤</strong><small>#E81123</small></button><button type="button"
+              class="swatch color-choice" data-color="#5c005c" aria-pressed="false"
+              aria-label="濃いマゼンタをアクセントカラーにする"><span class="swatch-color"
+                style="background:#5c005c"></span><strong>濃いマゼンタ</strong><small>#5C005C</small></button><button
+              type="button" class="swatch color-choice" data-color="#b4009e" aria-pressed="false"
+              aria-label="マゼンタをアクセントカラーにする"><span class="swatch-color"
+                style="background:#b4009e"></span><strong>マゼンタ</strong><small>#B4009E</small></button><button
+              type="button" class="swatch color-choice" data-color="#e3008c" aria-pressed="false"
+              aria-label="明るいマゼンタをアクセントカラーにする"><span class="swatch-color"
+                style="background:#e3008c"></span><strong>明るいマゼンタ</strong><small>#E3008C</small></button><button
+              type="button" class="swatch color-choice" data-color="#32145a" aria-pressed="false"
+              aria-label="濃い紫をアクセントカラーにする"><span class="swatch-color"
+                style="background:#32145a"></span><strong>濃い紫</strong><small>#32145A</small></button><button
+              type="button" class="swatch color-choice" data-color="#5c2d91" aria-pressed="false"
+              aria-label="紫をアクセントカラーにする"><span class="swatch-color"
+                style="background:#5c2d91"></span><strong>紫</strong><small>#5C2D91</small></button><button type="button"
+              class="swatch color-choice" data-color="#b4a0ff" aria-pressed="false" aria-label="明るい紫をアクセントカラーにする"><span
+                class="swatch-color"
+                style="background:#b4a0ff"></span><strong>明るい紫</strong><small>#B4A0FF</small></button></div>
+        </section>
+        <section class="section" id="typography">
+          <div class="section-head">
+            <div>
+              <h3>文字</h3>
+            </div>
+          </div>
+          <div class="type-grid">
+            <div><span class="micro">見出し / NOTO SANS JP</span>
+              <div class="type-display">自分らしくつくる<span class="accent">.</span></div>
+            </div>
+            <div><span class="micro">本文 / NOTO SANS JP</span>
+              <div class="type-body">日々の小さなアイデアから、<br>あたらしい何かをつくろう。</div><small>標準 400　 /　 中太 500　 /　 太字 700</small>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="buttons">
+          <div class="section-head">
+            <div>
+              <h3>ボタン</h3>
+            </div>
+          </div>
+          <div class="demo-row flex flex-wrap items-center"><button class="btn btn-primary">主要ボタン </button><button
+              class="btn btn-secondary">副ボタン </button><button class="btn btn-outline">アウトライン </button><button
+              class="btn btn-ghost">テキストボタン </button><button class="btn btn-primary" disabled>無効</button></div>
+        </section>
+        <section class="section" id="forms">
+          <div class="section-head">
+            <div>
+              <h3>フォーム</h3>
+            </div>
+          </div>
+          <div class="form-grid"><label class="field">お名前 <input placeholder="例：山田 はな"></label><label
+              class="field">メールアドレス <input type="email" placeholder="hello@example.com"></label><label
+              class="field">カテゴリー <select>
+                <option>選択してください</option>
+                <option>デザイン</option>
+                <option>開発</option>
+                <option>その他</option>
+              </select></label></div>
+          <div class="controls"><label class="checkbox-label"><input type="checkbox" checked><span
+                class="checkbox-indicator" aria-hidden="true"></span>お知らせを受け取る</label><label
+              class="checkbox-label"><input type="checkbox"><span class="checkbox-indicator"
+                aria-hidden="true"></span>あとで確認する</label><label class="switch-label"><input type="checkbox"
+                role="switch" checked><span class="switch"></span> 通知をオンにする</label></div>
+        </section>
+        <section class="section" id="feedback">
+          <div class="section-head">
+            <div>
+              <h3>通知・状態</h3>
+            </div>
+          </div>
+          <div class="badges"><span class="badge badge-green">利用可能</span><span class="badge badge-peach">進行中</span><span
+              class="badge badge-neutral">下書き</span></div>
+          <div class="notice">
+            <div><strong>準備ができました</strong>
+              <p>次のステップへ進めます。</p>
+            </div><button aria-label="通知を閉じる" class="dismiss">×</button>
+          </div>
+        </section>
+        <section class="section" id="cards">
+          <div class="section-head">
+            <div>
+              <h3>カード</h3>
+            </div>
+          </div>
+          <div class="cards">
+            <article class="sample-card">
+              <div class="card-art card-art-one"></div>
+              <div class="card-body"><span class="micro">アイデア　 /　 読了 5 分</span>
+                <h4>制作の記録</h4>
+                <p>制作の途中で見つけたことを記録する。</p><a href="#overview">詳しく見る </a>
+              </div>
+            </article>
+            <article class="sample-card">
+              <div class="card-art card-art-two"></div>
+              <div class="card-body"><span class="micro">日記　 /　 読了 3 分</span>
+                <h4>制作の途中</h4>
+                <p>少しずつ手を加えながら使っていく。</p><a href="#overview">詳しく見る </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="selection">
+          <div class="section-head">
+            <div>
+              <h3>選択・入力</h3>
+            </div>
+          </div>
+          <div class="component-stack">
+            <fieldset class="example-group">
+              <legend>ラジオボタン</legend>
+              <div class="controls"><label class="radio-label"><input type="radio" name="sample-radio" value="one"
+                    checked> 選択肢 1</label><label class="radio-label"><input type="radio" name="sample-radio"
+                    value="two"> 選択肢 2</label><label class="radio-label"><input type="radio" name="sample-radio"
+                    disabled> 無効</label></div>
+            </fieldset><label class="field">テキストエリア<textarea rows="4"
+                placeholder="内容を入力してください"></textarea></label><label class="field">検索<input type="search"
+                placeholder="検索"></label><label class="field">日付<input type="date"></label><label class="field">範囲
+              <output id="range-value">50</output><input id="range-input" type="range" min="0" max="100"
+                value="50"></label>
+          </div>
+        </section>
+        <section class="section" id="progress">
+          <div class="section-head">
+            <div>
+              <h3>進捗</h3>
+            </div>
+          </div>
+          <div class="component-stack">
+            <div>
+              <div class="example-heading"><label for="progress-demo">進行状況</label><span>65%</span></div><progress
+                id="progress-demo" max="100" value="65">65%</progress>
+            </div>
+            <div>
+              <div class="example-heading"><span>読み込み中</span></div><progress aria-label="読み込み中"></progress>
+            </div>
+            <div class="loading-row"><span class="spinner" aria-hidden="true"></span><span role="status">読み込み中</span>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="navigation">
+          <div class="section-head">
+            <div>
+              <h3>ナビゲーション</h3>
+            </div>
+          </div>
+          <div class="component-stack">
+            <div>
+              <div class="example-heading">タブ</div>
+              <div class="tabs" role="tablist" aria-label="表示の切り替え"><button type="button" role="tab" id="tab-one"
+                  aria-selected="true" aria-controls="panel-one" tabindex="0">概要</button><button type="button"
+                  role="tab" id="tab-two" aria-selected="false" aria-controls="panel-two" tabindex="-1">詳細</button>
+              </div>
+              <div class="tab-panel" role="tabpanel" id="panel-one" aria-labelledby="tab-one">概要の内容です。</div>
+              <div class="tab-panel" role="tabpanel" id="panel-two" aria-labelledby="tab-two" hidden>詳細の内容です。</div>
+            </div>
+            <div>
+              <div class="example-heading">ページネーション</div>
+              <nav class="pagination" aria-label="ページ"><button type="button" class="page-button"
+                  aria-current="page">1</button><button type="button" class="page-button">2</button><button
+                  type="button" class="page-button">3</button></nav>
+            </div>
+            <div>
+              <div class="example-heading">パンくずリスト</div>
+              <nav aria-label="現在位置">
+                <ol class="breadcrumbs">
+                  <li><a href="#overview">ホーム</a></li>
+                  <li aria-current="page">コンポーネント</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="disclosure">
+          <div class="section-head">
+            <div>
+              <h3>詳細表示</h3>
+            </div>
+          </div>
+          <div class="component-stack">
+            <div>
+              <div class="example-heading">アコーディオン</div>
+              <details class="accordion">
+                <summary>詳細を表示</summary>
+                <p>必要に応じて補足情報を表示します。</p>
+              </details>
+              <details class="accordion">
+                <summary>利用方法</summary>
+                <p>見出しを選択すると内容が開きます。</p>
+              </details>
+            </div>
+            <div>
+              <div class="example-heading">ツールチップ</div><button class="btn btn-outline tooltip-trigger" type="button"
+                aria-describedby="tooltip-example">説明を見る<span class="tooltip" id="tooltip-example"
+                  role="tooltip">補足情報を表示します。</span></button>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="dialogs">
+          <div class="section-head">
+            <div>
+              <h3>ダイアログ・通知</h3>
+            </div>
+          </div>
+          <div class="demo-row"><button class="btn btn-primary" id="open-dialog" type="button">ダイアログを開く</button><button
+              class="btn btn-outline" id="show-toast" type="button">通知を表示</button></div>
+          <dialog id="example-dialog" class="example-dialog" aria-labelledby="dialog-title">
+            <h4 id="dialog-title">確認</h4>
+            <p>変更を保存しますか？</p>
+            <div class="dialog-actions">
+              <form method="dialog"><button class="btn btn-outline" value="cancel">キャンセル</button><button
+                  class="btn btn-primary" value="save">保存</button></form>
+            </div>
+          </dialog>
+          <div id="toast" class="toast" role="status" hidden>保存しました。</div>
+        </section>
+        <section class="section" id="data">
+          <div class="section-head">
+            <div>
+              <h3>データ表示</h3>
+            </div>
+          </div>
+          <div class="component-stack">
+            <div>
+              <div class="example-heading">テーブル</div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">名前</th>
+                      <th scope="col">状態</th>
+                      <th scope="col">更新日</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>プロジェクト A</td>
+                      <td>進行中</td>
+                      <td>2026/11/20</td>
+                    </tr>
+                    <tr>
+                      <td>プロジェクト B</td>
+                      <td>完了</td>
+                      <td>2026/11/19</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div>
+              <div class="example-heading">アバター</div>
+              <div class="avatar-row"><span class="avatar" aria-label="山田 花">花</span><span class="avatar"
+                  aria-label="佐藤 太郎">太</span><span class="avatar" aria-label="ユーザー">人</span></div>
+            </div>
+            <div>
+              <div class="example-heading">区切り線</div>
+              <hr class="divider">
+            </div>
+          </div>
+        </section>
+        <footer><span>hikari UI</span><a href="#top">ページ上部へ </a></footer>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
